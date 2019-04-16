@@ -1,63 +1,19 @@
-{% extends 'base.html'%} 
+{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
-
-{% block content%}
-<div class="container-fluid">
-    <div class="row" id="top">
-        <div class="col-md-12 heading">
-            <h1 style="text-align: center">News Highlights</h1>
-        </div>
-    </div>
-    <hr>
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 categories">
-            <h2 style="text-align: center" >General News</h2>
-        </div>
-        {{macro.sourceCategories(general)}}
-    </div>
-    </div>
-    <hr>
-    <div class="row" id="business">
-        <div class="col-md-12 categories">
-            <h2 style="text-align: center" >Business News</h2>
-        </div>
-        {{macro.sourceCategories(business)}}
-    </div>
-    <hr>
-    <div class="row" id="entertainment">
-        <div class="col-md-12 categories">
-            <h2 style="text-align: center">Entertainment News</h2>
-        </div>
-        {{macro.sourceCategories(entertainment)}}
-    </div>
-    <hr>
-    <div class="row" id="sports">
-        <div class="col-md-12 categories">
-            <h2 style="text-align: center">Sports News</h2>
-        </div>
-        {{macro.sourceCategories(sports)}}
-    </div>
-    <hr>
-    <div class="row" id="tech">
-        <div class="col-md-12 categories">
-            <h2 style="text-align: center">Technology News</h2>
-        </div>
-        {{macro.sourceCategories(tech)}}
-    </div>
-    <hr>
-    <div class="row" id="science">
-        <div class="col-md- 12 categories">
-            <h2 style="text-align: center">Science News</h2>
-        </div>
-        {{macro.sourceCategories(science)}}
-    </div>
-    <hr>
-    <div class="row" id="health">
-        <div class="col-md- 12 categories">
-            <h2 style="text-align: center">Health News</h2>
-        </div>
-        {{macro.sourceCategories(health)}}
-    </div>
-</div>
-{% endblock%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    {% block styles %}
+      {{super()}}
+      <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    {% endblock %}
+    <a name="top"></a>
+      {% block content %}
+        {{macro.displayNewsList(recents)}}
+      {% endblock %}
+    <a href="#top"><button>Back to top</button></a>
+  </body>
+</html>
