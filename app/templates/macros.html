@@ -1,0 +1,41 @@
+{% macro displayNewsList(news_list) %} 
+
+
+{% for article in news_list %}
+<div class="container">
+  <div class="row">
+    <div class="card">
+        <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
+          <hr>
+          <h1><a href='{{article.link_to_site}}' target='_blank'>{{article.headline}}</a></h1>
+          <img src='{{article.image}}' alt='This is an image that visually portrays the headline' class='img-responsive'>
+          <h5>{{article.info}} Written {{article.daysSince}}</h5>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+<!-- Source Select -->
+
+{% endmacro %}
+
+{% macro displaySourceList(favourite) %}
+
+{% for source in favourite %}
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
+        <h1><a href='{{source.link_to_site}}' target='_blank'>{{source.headline}}</a></h1>
+        <img src='{{source.image}}' alt='This is an image that visually portrays the headline' class='img-responsive'>
+        <h5>{{source.info}} Written {{source.daysSince}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endmacro %}
