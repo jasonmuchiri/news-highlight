@@ -1,42 +1,21 @@
-{% macro displayNewsList(news_list) %} 
-
-
-{% for article in news_list %}
-<div class="container">
-  <div class="row">
-    <div class="card">
-        <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
-          <hr>
-          <h1><a href='{{article.link_to_site}}' target='_blank'>{{article.headline}}</a></h1>
-          <img src='{{article.image}}' alt='This is an image that visually portrays the headline' class='img-responsive'>
-          <h5>{{article.info}} Written {{article.daysSince}}</h5>
+{% macro sourceCategories(categories) %} 
+{% for category in categories %}
+<div class="col-md-3 single-source">
+    <div class="row">
+        <div class="col-md-4 source-name">
+            <h3> {{category.name}} </h3>
+        </div>
+        <div class="col-md-7 source-details">
+            <p> {{category.description|truncate(150)}}
+                <br>
+                <a href="/articles/{{category.id}}&40">Read Articles</a>
+            </p>            
         </div>
     </div>
-  </div>
 </div>
-
-{% endfor %}
-
-<!-- Source Select -->
-
+{% endfor %} 
 {% endmacro %}
 
-{% macro displaySourceList(favourite) %}
-
-{% for source in favourite %}
-<div class="container">
-  <div class="row">
-    <div class="card">
-      <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
-        <h1><a href='{{source.link_to_site}}' target='_blank'>{{source.headline}}</a></h1>
-        <img src='{{source.image}}' alt='This is an image that visually portrays the headline' class='img-responsive'>
-        <h5>{{source.info}} Written {{source.daysSince}}</h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% endfor %}
-
-{% endmacro %}
-
+{% macro addMore() %}
+    
+{% endmacro%}
