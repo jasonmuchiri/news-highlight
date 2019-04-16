@@ -1,0 +1,30 @@
+a {
+    cursor: pointer;
+  }
+  a:hover{
+    text-decoration: none;
+    color:#C0392B;
+  }
+  body{
+    background-color:#F0F8FF;
+  }
+  .card{
+    text-align:center;
+    background-color:white;
+    border-radius: 20px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .card img{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  hr{
+    height:2px;
+    background-color:#E3E3E3;
+  }
+  .container{
+    background-color: white;
+    border-radius:40px;
+  }
