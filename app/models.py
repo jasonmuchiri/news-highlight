@@ -1,26 +1,27 @@
-class Sources:
-    '''
-    Sources class that defines source objects
-    '''
-    def __init__(self,id,name,description,url,category,country):
-        '''
-        Function that initiates the sources class
-        '''
-        self.id = id
-        self.name = name
-        self.description = description
-        self.url = url
-        self.category = category
-        self.country = country
+class Source:
+  '''
+  This class is for the source object
+  '''
 
-class Articles:
-    '''
-    Article class that defines the article objects
-    '''
-    def __init__(self,author,title,description,url,urlToImage,publishedAt):
-        self.author = author
-        self.title = title
-        self.description = description
-        self.url = url
-        self.urlToImage = urlToImage
-        self.publishedAt = publishedAt
+  def __init__(self, source_name, info, headline, link_to_site, image, date_written, daysSince):
+    self.source_name = source_name
+    self.info = info
+    self.headline = headline
+    self.link_to_site = link_to_site
+    self.image = image
+    self.date_written = date_written
+    self.daysSince = daysSince
+  
+
+class Article:
+  '''
+  This class defines the Article objects
+  '''
+
+  def __init__(self, info, headline, link_to_site, image, date_written, daysSince):
+    self.info = info
+    self.headline = headline
+    self.link_to_site = link_to_site
+    self.image = image
+    self.date_written = date_written
+    self.daysSince = daysSince
