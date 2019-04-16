@@ -1,0 +1,26 @@
+<div class="nav-styles">
+    <div class='navbar navbar-inverse' role='navigation'>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+            <span class='sr-only'>Toggle Navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='/'>J's News</a>
+        </div>
+        <div class='navbar-collapse collapse'>
+          <ul class='nav navbar-nav'>
+            <li><a href="{{url_for('main.search', source_name='bbc-news')}}">BBC News</a></li>
+            <li><a href="{{url_for('main.search', source_name='usa-today')}}">USA Today</a></li>
+            <li><a href="{{url_for('main.search', source_name='cnn')}}">CNN</a></li>
+            <li><a href="{{url_for('main.search', source_name='the-new-york-times')}}">The New York Times</a></li>
+            <li><a href="{{url_for('main.search', source_name='the-washington-times')}}">The Washington Times</a></li>
+            <li><a href="{{url_for('main.search', source_name='espn')}}">ESPN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
