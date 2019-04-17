@@ -36,6 +36,10 @@ To start using this news-highlight app, use the following commands:
 |----------|-------------|-------------|
 |Load on click|Click on an atricle|Full article is displayed directly from the source website|
 
+## Live link to the application's website in heroku
+
+https://news-netlight.herokuapp.com/
+
 ## Contacts
 
 email me here: jasonmkinyua@gmail.com
